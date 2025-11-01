@@ -142,7 +142,7 @@ const products = [
     price: 899.99, 
     color: "Black", 
     rating: 4.8, 
-    imagePlaceholder: "../Images/Clogs/CC.png", 
+    imagePlaceholder: "Images/Clogs/CC.png", 
     description: "Lightweight and breathable clogs designed for all–day comfort. Perfect for work, home, or casual walks."
   }, 
   { 
@@ -152,7 +152,7 @@ const products = [
     price: 599.50, 
     color: "Black", 
     rating: 4.5, 
-    imagePlaceholder: "../Images/Clogs/CCC.png",
+    imagePlaceholder: "Images/Clogs/CCC.png",
     description: "Soft, cloud–like cushioning that reduces foot fatigue and gives you a pleasant walking experience."
   }, 
   { 
@@ -162,7 +162,7 @@ const products = [
     price: 499.99, 
     color: "Black", 
     rating: 4.9, 
-    imagePlaceholder: "../Images/Clogs/JC.png",
+    imagePlaceholder: "Images/Clogs/JC.png",
     description: "Durable clogs with a sleek design. Ideal for both indoor lounge and outdoor casual use."
   }, 
   { 
@@ -172,7 +172,7 @@ const products = [
     price: 759.00, 
     color: "Cream", 
     rating: 4.7, 
-    imagePlaceholder: "../Images/Clogs/MSC.png",
+    imagePlaceholder: "Images/Clogs/MSC.png",
     description: "Premium cushioning paired with a clean, minimalist look — comfort meets modern style."
   }, 
   { 
@@ -182,7 +182,7 @@ const products = [
     price: 1249.99, 
     color: "Black", 
     rating: 4.2, 
-    imagePlaceholder: "../Images/Clogs/UXC.png",
+    imagePlaceholder: "Images/Clogs/UXC.png",
     description: "Tough yet lightweight clogs with slip-resistant soles for secure, everyday comfort."
   }, 
   { 
@@ -192,7 +192,7 @@ const products = [
     price: 799.99, 
     color: "Black", 
     rating: 4.5, 
-    imagePlaceholder: "../Images/Clogs/KC.png",
+    imagePlaceholder: "Images/Clogs/KC.png",
     description: "Stylish clogs built with supportive foam to keep your step comfortable all day long."
   }, 
   { 
@@ -202,7 +202,7 @@ const products = [
     price: 1249.99, 
     color: "Black", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Clogs/MXC.png",
+    imagePlaceholder: "Images/Clogs/MXC.png",
     description: "Aggressive, sporty design with extra heel support — built for long and active days."
   }, 
   { 
@@ -212,7 +212,7 @@ const products = [
     price: 649.99, 
     color: "Brown", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Clogs/OGC.png",
+    imagePlaceholder: "Images/Clogs/OGC.png",
     description: "A classic clog style with soft padding and lasting durability for everyday wear."
   }, 
   { 
@@ -222,7 +222,7 @@ const products = [
     price: 499.99, 
     color: "Black", 
     rating: 4.7, 
-    imagePlaceholder: "../Images/Clogs/SC.png",
+    imagePlaceholder: "Images/Clogs/SC.png",
     description: "Simple, lightweight, and slip-resistant. Ideal for school, errands, and casual outings."
   }, 
   { 
@@ -232,7 +232,7 @@ const products = [
     price: 2499.99, 
     color: "Brown", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Clogs/VC.png",
+    imagePlaceholder: "Images/Clogs/VC.png",
     description: "Premium-grade clogs built with reinforced soles for maximum durability and comfort."
   }, 
   
@@ -244,7 +244,7 @@ const products = [
     price: 699.99, 
     color: "Black", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Slides/ARS.png",
+    imagePlaceholder: "Images/Slides/ARS.png",
     description: "Designed for recovery and relaxation. Responsive foam supports tired feet after long days."
   }, 
   { 
@@ -254,7 +254,7 @@ const products = [
     price: 499.99, 
     color: "Black", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Slides/LMS.png",
+    imagePlaceholder: "Images/Slides/LMS.png",
     description: "Memory foam cushioning molds to your feet, giving you a soft, personalized fit."
   }, 
   { 
@@ -264,7 +264,7 @@ const products = [
     price: 1349.99, 
     color: "Brown", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Slides/MSS.png",
+    imagePlaceholder: "Images/Slides/MSS.png",
     description: "Modern slides with soft padding and a clean style for everyday casual comfort."
   }, 
   { 
@@ -274,7 +274,7 @@ const products = [
     price: 1099.99, 
     color: "Cream", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Slides/SSS.png",
+    imagePlaceholder: "Images/Slides/SSS.png",
     description: "Durable sole and strong grip design — built for quick outings or relaxed indoor use."
   }, 
   { 
@@ -284,7 +284,7 @@ const products = [
     price: 999.99, 
     color: "Brown", 
     rating: 4.2, 
-    imagePlaceholder: "../Images/Slides/UXS.png",
+    imagePlaceholder: "Images/Slides/UXS.png",
     description: "Shock-absorbing soles and flexible straps provide easy comfort for daily movement."
   }, 
   { 
@@ -294,7 +294,7 @@ const products = [
     price: 899.99, 
     color: "White", 
     rating: 4.7, 
-    imagePlaceholder: "../Images/Slides/DS.png",
+    imagePlaceholder: "Images/Slides/DS.png",
     description: "Bold, stylish slides with responsive cushioning for active, everyday use."
   }, 
   { 
@@ -304,7 +304,7 @@ const products = [
     price: 749.99, 
     color: "Blue", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Slides/ES.png",
+    imagePlaceholder: "Images/Slides/ES.png",
     description: "Water-friendly slides built with fast-drying materials and great grip on wet surfaces."
   }, 
   { 
@@ -314,7 +314,7 @@ const products = [
     price: 599.99, 
     color: "Red", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Slides/FS.png",
+    imagePlaceholder: "Images/Slides/FS.png",
     description: "Bright, energetic slides with lightweight cushioning for casual daily use."
   }, 
   { 
@@ -324,7 +324,7 @@ const products = [
     price: 1099.99, 
     color: "Green", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Slides/NS.png",
+    imagePlaceholder: "Images/Slides/NS.png",
     description: "Soft padded design and dependable traction — perfect for errands and indoor relaxation."
   }, 
   { 
@@ -334,7 +334,7 @@ const products = [
     price: 1599.99, 
     color: "Pink", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Slides/PS.png",
+    imagePlaceholder: "Images/Slides/PS.png",
     description: "Bold pink slides made with premium foam, adding both comfort and personality to your fit."
   }, 
   
@@ -346,7 +346,7 @@ const products = [
     price: 449.99, 
     color: "Green", 
     rating: 4.3, 
-    imagePlaceholder: "../Images/Flip-Flops/CFP.png",
+    imagePlaceholder: "Images/Flip-Flops/CFP.png",
     description: "Lightweight and durable flip-flops built for everyday adventures and casual outings."
   }, 
   { 
@@ -356,7 +356,7 @@ const products = [
     price: 749.99, 
     color: "Black", 
     rating: 4.3, 
-    imagePlaceholder: "../Images/Flip-Flops/HFFP.png",
+    imagePlaceholder: "Images/Flip-Flops/HFFP.png",
     description: "Supportive and comfortable flip-flops made with slip-resistant grip for daily use."
   }, 
   { 
@@ -366,7 +366,7 @@ const products = [
     price: 1099.99, 
     color: "White", 
     rating: 4.5, 
-    imagePlaceholder: "../Images/Flip-Flops/QDFP.png",
+    imagePlaceholder: "Images/Flip-Flops/QDFP.png",
     description: "Fast-drying material ideal for pools, showers, and watery environments — always ready to go."
   }, 
   { 
@@ -376,7 +376,7 @@ const products = [
     price: 599.99, 
     color: "Green", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Flip-Flops/SSBFP.png",
+    imagePlaceholder: "Images/Flip-Flops/SSBFP.png",
     description: "Beach-friendly flip-flops with soft soles that stay comfortable during long walks."
   }, 
   { 
@@ -386,7 +386,7 @@ const products = [
     price: 1449.99, 
     color: "Brown", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Flip-Flops/UXFP.png",
+    imagePlaceholder: "Images/Flip-Flops/UXFP.png",
     description: "Premium comfort and durable base construction make these perfect for daily indoor and outdoor wear."
   }, 
   { 
@@ -396,7 +396,7 @@ const products = [
     price: 649.99, 
     color: "Black", 
     rating: 4.3, 
-    imagePlaceholder: "../Images/Flip-Flops/EFP.png",
+    imagePlaceholder: "Images/Flip-Flops/EFP.png",
     description: "Lightweight flip-flops with a sleek, simple look suitable for everyday casual outfits."
   }, 
   { 
@@ -406,7 +406,7 @@ const products = [
     price: 599.99, 
     color: "Black", 
     rating: 4.6, 
-    imagePlaceholder: "../Images/Flip-Flops/OGFP.png",
+    imagePlaceholder: "Images/Flip-Flops/OGFP.png",
     description: "Comfortable and durable everyday flip-flops with slip-resistant grip support."
   }, 
   { 
@@ -416,7 +416,7 @@ const products = [
     price: 1999.99, 
     color: "Black", 
     rating: 4.9, 
-    imagePlaceholder: "../Images/Flip-Flops/PFP.png",
+    imagePlaceholder: "Images/Flip-Flops/PFP.png",
     description: "Premium-grade flip-flops built for comfort, style, and long-lasting durability."
   }, 
   { 
@@ -426,7 +426,7 @@ const products = [
     price: 599.99, 
     color: "Black", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Flip-Flops/TFP.png",
+    imagePlaceholder: "Images/Flip-Flops/TFP.png",
     description: "Thick, cushioned soles give a soft, bouncy feel — great for long walks and all-day wear."
   }, 
   { 
@@ -436,7 +436,7 @@ const products = [
     price: 1449.99, 
     color: "Brown", 
     rating: 4.4, 
-    imagePlaceholder: "../Images/Flip-Flops/WFP.png",
+    imagePlaceholder: "Images/Flip-Flops/WFP.png",
     description: "Stylish flip-flops with a durable base and comfortable straps for daily casual use."
   }, 
 ];
@@ -531,17 +531,17 @@ document.addEventListener('DOMContentLoaded', renderProducts);
 document.addEventListener("DOMContentLoaded", () => {
     const carouselData = [
         {
-            img: "../Images/Clogs/UXC.png",
+            img: "Images/Clogs/UXC.png",
             title: "Ultra X Clogs",
             text: "Slip-resistant and lightweight everyday comfort."
         },
         {
-            img: "../Images/Slides/UXS.png",
+            img: "Images/Slides/UXS.png",
             title: "Ultra X Slides",
             text: "Super soft shock-absorbing strap support."
         },
         {
-            img: "../Images/Flip-Flops/SSBFP.png",
+            img: "Images/Flip-Flops/SSBFP.png",
             title: "Sunset Beach Flip-Flops",
             text: "Perfect for beach walks and casual summer wear."
         }
