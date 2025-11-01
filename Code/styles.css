@@ -1,0 +1,59 @@
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    opacity: 1; /* Start fully visible */
+    transition: opacity 0.4s ease-in-out; /* Define the transition duration and type */
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+/* 2. Define the 'fade-out' state */
+body.fade-out {
+    opacity: 0; /* Fade to fully transparent */
+}
+
+
+
+/* CTA Gradient Button (index.html) */
+.cta-button {
+    background-image: linear-gradient(to right, #4f46e5, #6366f1, #4f46e5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-button:hover {
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.5), 
+                0 4px 6px -2px rgba(79, 70, 229, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Product Button Hover (products.html) */
+.btn-primary:hover {
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Product Card Hover (products.html) */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity .3s;
+}
+.fade.show {
+  opacity: 1;
+}
+
+
+#carousel-img,
+#carousel-title,
+#carousel-text {
+    transition: opacity .5s ease;
+}
