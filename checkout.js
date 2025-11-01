@@ -9,12 +9,18 @@ function saveCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+function getStock() {
+  return JSON.parse(localStorage.getItem("stock")) || {};
+}
+
+function saveStock(stock) {
+  localStorage.setItem("stock", JSON.stringify(stock));
+}
+
 function updateCartCount() {
   const cart = getCart();
   const countDisplay = document.getElementById("cart-count");
-  
-  // Only show number of items added (1 per product)
-  const count = cart.length;
+  const count = cart.length; // 1 per product in cart
   if (countDisplay) countDisplay.textContent = count;
 }
 
@@ -25,6 +31,7 @@ function displayCart() {
   const container = document.getElementById("cart-items");
   const totalDisplay = document.getElementById("cart-total");
   const cart = getCart();
+  const stock = getStock();
 
   container.innerHTML = "";
   let total = 0;
@@ -44,16 +51,12 @@ function displayCart() {
 
     const card = document.createElement("div");
     card.className = "flex flex-col sm:flex-row bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 p-4 sm:p-6 cursor-pointer hover:shadow-2xl transition";
-    
-    // Make the card clickable to go to payment page for this item
+
+    // Click to go to payment for this single item
     card.addEventListener("click", (e) => {
-      // Prevent triggering if the remove button is clicked
       if (e.target.tagName.toLowerCase() === "button") return;
 
-      // Store the selected product in localStorage temporarily
       localStorage.setItem("selectedProduct", JSON.stringify(item));
-
-      // Navigate to payment page
       window.location.href = "payment.html";
     });
 
@@ -77,17 +80,26 @@ function displayCart() {
   totalDisplay.textContent = `Total: ₱${total.toFixed(2)}`;
 }
 
-
 // =============================
 // REMOVE ITEM
 // =============================
 function removeItem(index) {
   const cart = getCart();
+  if (!cart[index]) return;
+
   const confirmed = confirm(`Are you sure you want to remove "${cart[index].name}" from your cart?`);
   if (!confirmed) return;
 
+  const item = cart[index];
+  const stock = getStock();
+
+  // Update stock when removing from cart
+  stock[item.id] = (stock[item.id] ?? products.find(p => p.id === item.id)?.stock) + item.quantity;
+  saveStock(stock);
+
   cart.splice(index, 1);
   saveCart(cart);
+
   displayCart();
   updateCartCount();
 }
@@ -105,6 +117,13 @@ document.getElementById("clear-cart").addEventListener("click", () => {
   const confirmed = confirm("Are you sure you want to clear your entire cart?");
   if (!confirmed) return;
 
+  // Restore stock for all items in cart
+  const stock = getStock();
+  cart.forEach(item => {
+    stock[item.id] = (stock[item.id] ?? products.find(p => p.id === item.id)?.stock) + item.quantity;
+  });
+  saveStock(stock);
+
   localStorage.removeItem("cart");
   displayCart();
   updateCartCount();
@@ -121,13 +140,9 @@ document.getElementById("checkout-btn").addEventListener("click", () => {
     return;
   }
 
-  // Remove any previously selected single product
-  localStorage.removeItem("selectedProduct");
-
-  // Navigate to payment page
+  localStorage.removeItem("selectedProduct"); // clear single item selection
   window.location.href = "payment.html";
 });
-
 
 // =============================
 // INIT

@@ -1,4 +1,4 @@
-// product-detail.js (REPLACEMENT)
+// product-detail.js
 
 // Get product ID from URL
 const urlParams = new URLSearchParams(window.location.search);
@@ -7,50 +7,83 @@ const productId = parseInt(urlParams.get("id"), 10);
 // Safe helper to get element by id
 const $ = id => document.getElementById(id);
 
-// Populate product details if products array is available
+// Load products array from script.js
 if (typeof products !== "undefined" && productId) {
   const product = products.find(p => p.id === productId);
 
   if (product) {
+    // Load stock from localStorage if exists, otherwise use product.stock
+    const storedStock = JSON.parse(localStorage.getItem("stock")) || {};
+    const currentStock = storedStock[product.id] ?? product.stock;
+
     $("product-name").textContent = product.name;
     $("product-category").textContent = product.category;
     $("product-description").textContent = product.description;
     $("product-img").src = product.imagePlaceholder;
     $("product-price").textContent = product.price.toFixed(2);
     $("product-rating").textContent = `(${product.rating})`;
+    $("product-stock").textContent = currentStock;
+
+    // Disable Add To Cart if stock is 0
+    const addBtn = $("add-to-cart");
+    if (currentStock <= 0 && addBtn) {
+      addBtn.disabled = true;
+      addBtn.textContent = "Out of Stock";
+    }
   }
 }
 
-// SINGLE add-to-cart handler (no duplicates)
+// SINGLE add-to-cart handler
 const addToCartBtn = $("add-to-cart");
 if (addToCartBtn) {
   addToCartBtn.addEventListener("click", (event) => {
-    // Prevent the click from bubbling (prevents fade handler or other handlers from re-triggering)
-    event.stopPropagation();
     event.preventDefault();
+    event.stopPropagation();
 
-    // Read quantity and size safely
     const quantity = parseInt($("product-quantity")?.value, 10) || 1;
-    let selectedSize = $("product-size")?.value;
-    if (!selectedSize) selectedSize = "Default";
-
-    // Get product name (from DOM) and find product object to ensure id & price match
+    let selectedSize = $("product-size")?.value || "Default";
     const productName = $("product-name")?.textContent?.trim();
-    const product = (typeof products !== "undefined") ? products.find(p => p.name === productName || p.id === productId) : null;
+    const product = (typeof products !== "undefined") 
+      ? products.find(p => p.name === productName || p.id === productId) 
+      : null;
 
     if (!product) {
       alert("Product not found. Please refresh the page.");
       return;
     }
 
-    // Call the global addToCart function with event, productName, quantity
-    // addToCart reads the DOM for size (we pass selectedSize by temporarily setting the select value if needed),
-    // but to be explicit we will pass quantity and ensure addToCart uses the DOM or an override.
-    // If your addToCart supports a size param, pass it; otherwise it will read DOM.
-    // Here we call addToCart(event, product.name, quantity)
+    // Load current stock from localStorage
+    const storedStock = JSON.parse(localStorage.getItem("stock")) || {};
+    let currentStock = storedStock[product.id] ?? product.stock;
+
+    // Check stock before adding
+    if (currentStock <= 0) {
+      alert("Sorry, this product is out of stock!");
+      addToCartBtn.disabled = true;
+      addToCartBtn.textContent = "Out of Stock";
+      return;
+    }
+
+    if (quantity > currentStock) {
+      alert(`Only ${currentStock} item(s) left in stock!`);
+      return;
+    }
+
+    // Call global addToCart
     addToCart(event, product.name, quantity);
 
-    // Optional: feedback (you already have alert in addToCart)
-    // If you prefer toast instead of alert, replace with showToast(...) if implemented.
+    // Subtract stock
+    currentStock -= quantity;
+    $("product-stock").textContent = currentStock;
+
+    // Save updated stock
+    storedStock[product.id] = currentStock;
+    localStorage.setItem("stock", JSON.stringify(storedStock));
+
+    // Disable button if stock hits 0
+    if (currentStock <= 0) {
+      addToCartBtn.disabled = true;
+      addToCartBtn.textContent = "Out of Stock";
+    }
   });
 }

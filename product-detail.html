@@ -23,28 +23,28 @@
   </script>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
+<body>
 
   <!--Top Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-white shadow-lg">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
+  <header class="navbar">
+          <nav class="nav">
+              <div class="navbar-content">
 
-        <!-- Brand Name: Tsinelas-Earns -->
-        <a href="index.html" class="text-3xl font-extrabold text-primary-indigo tracking-tight">
-          Tsinelas<span class="text-gray-900">-Earns</span>
-        </a>
+                  <!-- Brand Name: Tsinelas-Earns -->
+                  <a href="#" class="logo">
+                      Tsinelas<span>-Earns</span>
+                  </a>
 
-        <!-- Links -->
-        <div class="hidden md:flex space-x-8">
-          <a href="index.html" class="text-lg font-medium text-gray-600 hover:text-primary-indigo transition">Home</a>
-          <a href="clogs.html" class="text-lg font-medium text-gray-600 hover:text-primary-indigo transition">Clogs</a>
-          <a href="flipflops.html" class="text-lg font-medium text-gray-600 hover:text-primary-indigo transition">Flip-Flops</a>
-          <a href="slides.html" class="text-lg font-medium text-gray-600 hover:text-primary-indigo transition">Slides</a>
-        </div>
+                  <!-- Top Navigation Bar -->
+                <div class="nav-links">
+                      <a href="index.html">Home</a>
+                      <a href="clogs.html">Clogs</a>
+                      <a href="flipflops.html">Flip-Flops</a>
+                      <a href="slides.html">Slides</a>
+                  </div>
 
-        <!-- Cart -->
-        <div class="hidden md:flex items-center">
+                  <!-- Cart Button  -->
+                  <div class="hidden md:flex items-center">
                     <a href="checkout.html"
                     class="flex items-center space-x-2 text-lg font-semibold text-white bg-primary-indigo px-5 py-2 rounded-full hover:bg-indigo-600 transition shadow-md transform transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,40 +52,44 @@
                         </svg>
                         <span>Cart (<span id="cart-count">0</span>)</span>
                     </a>
-        </div>
-      </div>
-    </nav>
+                </div>
+
+
+              </div>
+          </nav>
   </header>
 
   <!-- Products Detail -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-    <div class="bg-white rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-10 p-8">
+  <main class="main-clogs">
+
+    <div class="card-container">
       
       <!-- Product Image -->
-      <div class="flex justify-center items-center">
-        <img id="product-img" src="Images/Clogs/CC.png" alt="Product Image" class="w-full max-w-md rounded-xl shadow-md">
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <img id="product-img" src="Images/Clogs/CC.png" alt="Product Image" class="product-img-container">
       </div>
 
       <!-- Product Info -->
       <div>
-        <p id="product-category" class="text-primary-indigo uppercase tracking-wider font-semibold mb-2">Clogs</p>
-        <h1 id="product-name" class="text-4xl font-extrabold mb-4">Comforza Clogs</h1>
-        <p id="product-description" class="text-gray-600 text-lg leading-relaxed mb-6">
+        <p id="product-category" class="product-category">Clogs</p>
+        <h1 id="product-name" class="product-name">Comforza Clogs</h1>
+        <p id="product-description" class="product-description">
           Comfortable and stylish clogs made with premium rubber and breathable holes, perfect for everyday use.
         </p>
 
         <!-- Rating -->
-        <div class="flex items-center mb-4">
-          <p class="text-yellow-400 text-lg">⭐⭐⭐⭐☆</p>
-          <span id="product-rating" class="ml-2 text-gray-600">(4.8)</span>
+        <div class="rating-container">
+          <p class="rating-stars">⭐⭐⭐⭐☆</p>
+          <span id="product-rating" class="product-rating">(4.8)</span>
         </div>
 
         <p class="text-3xl font-extrabold text-gray-900 mb-6">₱<span id="product-price">459.99</span></p>
+        <span class="text-md font-semibold mb-20 text-gray-900">Stock: <span id="product-stock" class="text-md font-semibold mb-2 text-gray-500"></span>
 
         <!-- Sizes -->
-        <div class="mb-4">
-          <label class="block font-medium mb-1">Select Size</label>
-          <select id="product-size" class="border border-gray-300 rounded-lg p-2 mb-4">
+        <div style="margin-bottom: 1rem" >
+          <label style="display: block; font-weight: 500; margin-bottom: 0.25rem;">Select Size</label>
+          <select id="product-size" class="size-selector">
             <option value="6">6</option>
             <option value="7">7</option>
             <option value="8">8</option>
@@ -95,21 +99,20 @@
         </div>
 
         <!-- Quantity -->
-        <div class="mb-6">
-          <label class="block text-gray-700 font-medium mb-2">Quantity</label>
-          <input id="product-quantity" type="number" min="1" value="1"
-                 class="border border-gray-300 rounded-lg p-2 w-24 text-center focus:ring-primary-indigo focus:border-primary-indigo">
+        <div class="quantity-selector">
+          <label for="product-quantity">Quantity</label>
+          <input id="product-quantity" type="number" min="1" value="1">
         </div>
 
         <!-- Buttons -->
-        <div class="flex space-x-4">
+        <div class="button-group">
           <button id="add-to-cart"
-                  class="bg-primary-indigo text-white font-semibold py-3 px-6 rounded-lg shadow-md transition hover:bg-indigo-600 transform hover:scale-105">
+                  class="add-to-cart">
             Add to Cart
           </button>
 
           <button onclick="history.back()"
-             class="border border-primary-indigo text-primary-indigo font-semibold py-3 px-6 rounded-lg hover:bg-indigo-50 transition">
+             class="btn-go-back">
             Go back
         </button>
         </div>
@@ -118,12 +121,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 mt-16">
-    <div class="max-w-7xl mx-auto py-8 px-4 text-center">
-      <p class="text-base text-gray-500">
-        &copy; 2025 Tsinelas-Earns, Inc. | Comfort. Style. Value.
-      </p>
-    </div>
+  <footer>
+        <div class="footer-inner">
+            <p>&copy; 2025 Tsinelas-Earns, Inc. | Comfort. Style. Value.</p>
+        </div>
   </footer>
 
   <script>

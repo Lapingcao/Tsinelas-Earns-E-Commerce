@@ -30,21 +30,21 @@
 
 <body>
 
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+    <header class="navbar">
+        <nav class="nav">
+            <div class="navbar-content">
 
                 <!-- Brand Name: Tsinelas-Earns -->
-                <a href="#" class="text-3xl font-extrabold text-primary-indigo tracking-tight">
-                    Tsinelas<span class="text-gray-900">-Earns</span>
+                <a href="#" class="logo">
+                    Tsinelas<span>-Earns</span>
                 </a>
 
                 <!-- Top Navigation Bar -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-lg text-primary-indigo font-bold border-b-2 border-primary-indigo pb-1">Home</a>
-                    <a href="clogs.html" class="text-lg font-medium text-gray-600 hover:text-primary-indigo transition duration-150">Clogs</a>
-                    <a href="flipflops.html" class="text-lg font-medium text-gray-600 hover:text-primary-indigo transition duration-150">Flip-Flops</a>
-                    <a href="slides.html" class="text-lg font-medium text-gray-600 hover:text-primary-indigo transition duration-150">Slides</a>
+               <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="clogs.html">Clogs</a>
+                    <a href="flipflops.html">Flip-Flops</a>
+                    <a href="slides.html">Slides</a>
                 </div>
 
                 <!-- Cart Button  -->
@@ -58,186 +58,149 @@
                     </a>
                 </div>
 
+
             </div>
         </nav>
     </header>
 
     <!-- Main Page -->
-    <main>
-        <section class="relative pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-40 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="lg:grid lg:grid-cols-12 lg:gap-12 lg:items-center">
+   <main>
+    
+  <section class="section-container">
+    <div class="inner-container">
+      <div class="grid-lg">
 
-                    <!-- Tagline and Descriptions -->
-                    <div class="lg:col-span-6 xl:col-span-6">
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
-                            Step Into Comfort.<br class="hidden sm:inline" /> Elevate Your <span class="text-primary-indigo">Everyday.</span>
-                        </h1>
-                        <p class="mt-6 text-xl text-gray-600 max-w-lg">
-                            Discover the perfect blend of style and blissful comfort with Tsinelas-Earns. From cushioned clogs to sleek slides, your feet deserve the best.
-                        </p>
-                        <div class="mt-10 flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-                            <a href="#featured" class="cta-button inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-bold rounded-full text-white shadow-xl">
-                                Explore Our Collections
-                            </a>
-                            <a href="#contact" class="inline-flex justify-center items-center px-8 py-4 border border-gray-300 text-base font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50 transition duration-150">
-                                Contact Sales
-                            </a>
-                        </div>
-                    </div>
+        <!-- Tagline and Descriptions -->
+        <div class="tagline-container">
+            <h1>
+                Step Into Comfort.<br class="hidden sm:inline" /> Elevate Your <span>Everyday.</span>
+            </h1>
+            <p>
+                Discover the perfect blend of style and blissful comfort with Tsinelas-Earns. From cushioned clogs to sleek slides, your feet deserve the best.
+            </p>
+            <div class="button-group">
+                <a href="#featured" class="cta-button">
+                    Explore Our Collections
+                </a>
+                <a href="#contact" class="secondary-button">
+                    Contact Sales
+                </a>
+            </div>
+        </div>
 
-                    <!-- Featured Collection -->
-                    <div class="mt-12 lg:mt-0 lg:col-span-6 xl:col-span-6">
 
-                        <div class="relative overflow-hidden rounded-xl shadow-2xl aspect-video">
-
-                            <img id="carousel-img"
-                                class="w-full h-full object-cover transition-opacity duration-700 opacity-100"
-                                src="Images/Flip-Flops/SSBFP.png"
-                                alt="Featured Product">
-
-                            <!-- Description -->
-                            <div id="carousel-desc"
-                                class="absolute bottom-0 left-0 w-full bg-indigo-600/80 text-white px-4 py-3 
-                                    backdrop-blur-sm transition-opacity duration-700">
-                                <h3 id="carousel-title" class="font-semibold text-lg">Featured Collections</h3>
-                                <p id="carousel-text" class="text-sm opacity-90">Breathable cushioning for everyday comfort.</p>
-                            </div>
-                        </div>
-                    </div>
-
+        <!-- Featured Collection -->
+        <div class="featured-collection">
+            <div class="card">
+                <img id="carousel-img" src="Images/Flip-Flops/SSBFP.png" alt="Featured Product">
+                <div class="description">
+                    <h3 id="carousel-title">Featured Collections</h3>
+                    <p id="carousel-text">Breathable cushioning for everyday comfort.</p>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Categories Cards -->
-        <section id="featured" class="py-16 sm:py-24 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <h2 class="text-base text-primary-indigo font-semibold tracking-wide uppercase">Our Specialties</h2>
-                    <p class="mt-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900">
-                        The Three Pillars of Tsinelas-Earns
-                    </p>
-                    <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-600">
-                        We focus on quality, durability, and ultimate relaxation across our core product lines.
-                    </p>
-                </div>
 
-                <div class="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      </div>
+    </div>
+  </section>
 
-                    <!-- Clogs -->
-                    <div id="clogs" class="bg-white rounded-xl shadow-2xl overflow-hidden group hover:shadow-primary-indigo/30 transition duration-300">
-                        <div class="aspect-w-4 aspect-h-3 overflow-hidden">
-                            <img class="w-full h-48 object-cover group-hover:opacity-85 transition duration-300 transform group-hover:scale-105"
-                                 src=" Images/Clogs/UXC.png"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/4f46e5/ffffff?text=Clogs';"
-                                 alt="A durable, cushioned clog shoe.">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-900">The Clogs Collection</h3>
-                            <p class="mt-2 text-gray-600">
-                                Maximum foot support and lasting comfort for home and garden. Engineered for all-day wear.
-                            </p>
-                            <a href="clogs.html" class="mt-4 inline-flex items-center text-primary-indigo font-semibold hover:text-indigo-600">
-                                Shop Clogs
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+  <!-- Categories Cards -->
+  <section id="featured">
+    <div class="specialties-container">
+    <div class="text-center">
+            <h2>Our Specialties</h2>
+            <h3>The Three Pillars of Tsinelas-Earns</h3>
+            <p class="description">
+                We focus on quality, durability, and ultimate relaxation across our core product lines.
+            </p>
+        </div>
+    </div>
 
-                    <!-- Flip-Flops -->
-                    <div id="flipflops" class="bg-white rounded-xl shadow-2xl overflow-hidden group hover:shadow-primary-indigo/30 transition duration-300">
-                        <div class="aspect-w-4 aspect-h-3 overflow-hidden">
-                            <img class="w-full h-48 object-cover group-hover:opacity-85 transition duration-300 transform group-hover:scale-105"
-                                 src="Images/Flip-Flops/HFFP.png"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/9333ea/ffffff?text=Flip-Flops';"
-                                 alt="A classic, simple pair of flip-flops.">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-900">The Flip-Flops Line</h3>
-                            <p class="mt-2 text-gray-600">
-                                Timeless design meets modern orthopedic support. Perfect for beach days or casual strolls.
-                            </p>
-                            <a href="flipflops.html" class="mt-4 inline-flex items-center text-primary-indigo font-semibold hover:text-indigo-600">
-                                Shop Flip-Flops
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
 
-                    <!-- Slides -->
-                    <div id="slides" class="bg-white rounded-xl shadow-2xl overflow-hidden group hover:shadow-primary-indigo/30 transition duration-300">
-                        <div class="aspect-w-4 aspect-h-3 overflow-hidden">
-                            <img class="w-full h-48 object-cover group-hover:opacity-85 transition duration-300 transform group-hover:scale-105"
-                                 src="Images/Slides/UXS.png"
-                                 onerror="this.onerror=null; this.src='https://placehold.co/600x400/0d9488/ffffff?text=Slides';"
-                                 alt="A modern, wide-strap slide slipper.">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-900">The Slides Series</h3>
-                            <p class="mt-2 text-gray-600">
-                                Sleek, minimalist, and incredibly soft. Ideal for quick errands or post-workout recovery.
-                            </p>
-                            <a href="slides.html" class="mt-4 inline-flex items-center text-primary-indigo font-semibold hover:text-indigo-600">
-                                Shop Slides
-                                <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
+      <div class="featured-grid">
 
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Clogs -->
+        <div class="category-card">
+          <div class="card-image">
+            <img src="Images/Clogs/UXC.png" alt="A durable, cushioned clog shoe.">
+          </div>
+          <div class="card-content">
+            <h3>The Clogs Collection</h3>
+            <p>Maximum foot support and lasting comfort for home and garden. Engineered for all-day wear.</p>
+            <a href="clogs.html" class="shop-link">Shop Clogs</a>
+          </div>
+        </div>
+
+        <!-- Flip-Flops -->
+        <div class="category-card">
+          <div class="card-image">
+            <img src="Images/Flip-Flops/HFFP.png" alt="A classic, simple pair of flip-flops.">
+          </div>
+          <div class="card-content">
+            <h3>The Flip-Flops Line</h3>
+            <p>Timeless design meets modern orthopedic support. Perfect for beach days or casual strolls.</p>
+            <a href="flipflops.html" class="shop-link">Shop Flip-Flops</a>
+          </div>
+        </div>
+
+        <!-- Slides -->
+        <div class="category-card">
+          <div class="card-image">
+            <img src="Images/Slides/UXS.png" alt="A modern, wide-strap slide slipper.">
+          </div>
+          <div class="card-content">
+            <h3>The Slides Series</h3>
+            <p>Sleek, minimalist, and incredibly soft. Ideal for quick errands or post-workout recovery.</p>
+            <a href="slides.html" class="shop-link">Shop Slides</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
 
     <!-- Footer -->
-    <footer class="bg-gray-900" id="contact">
-        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    <footer id="contact">
+        <div class="footer-inner">
+            <div class="footer-grid">
                 <div>
-                    <h4 class="text-sm font-semibold text-primary-indigo tracking-wider uppercase">Products</h4>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="clogs.html" class="text-base text-gray-300 hover:text-white">Clogs</a></li>
-                        <li><a href="flipflops.html" class="text-base text-gray-300 hover:text-white">Flip-Flops</a></li>
-                        <li><a href="slides.html" class="text-base text-gray-300 hover:text-white">Slides</a></li>
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="clogs.html">Clogs</a></li>
+                        <li><a href="flipflops.html">Flip-Flops</a></li>
+                        <li><a href="slides.html">Slides</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-sm font-semibold text-primary-indigo tracking-wider uppercase">Company</h4>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">About Us</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Careers</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Press</a></li>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-sm font-semibold text-primary-indigo tracking-wider uppercase">Support</h4>
-                    <ul class="mt-4 space-y-4">
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Contact</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">FAQ</a></li>
-                        <li><a href="#" class="text-base text-gray-300 hover:text-white">Shipping & Returns</a></li>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
                     </ul>
                 </div>
-                <div class="col-span-2 md:col-span-1">
-                    <h4 class="text-sm font-semibold text-primary-indigo tracking-wider uppercase">Tsinelas-Earns</h4>
-                    <p class="mt-4 text-gray-400">
-                        The home of premium, professional comfort tsinelas. Designed for your lifestyle.
-                    </p>
+                <div class="col-span-2-md">
+                    <h4>Tsinelas-Earns</h4>
+                    <p>The home of premium, professional comfort tsinelas. Designed for your lifestyle.</p>
                 </div>
             </div>
-            <div class="mt-12 border-t border-gray-800 pt-8">
-                <p class="text-base text-gray-500 xl:text-center">
-                    &copy; 2025 Tsinelas-Earns, Inc. All rights reserved.
-                </p>
+            <div class="footer-note">
+                &copy; 2025 Tsinelas-Earns, Inc. All rights reserved.
             </div>
         </div>
     </footer>
+
 
     <script>
         window.addEventListener("load", () => {
