@@ -1388,8 +1388,7 @@ button.go-back:hover {
 
 
 #payment-cart-items {
-  /* space-y-4 */
-  /* Adds vertical spacing between children */
+  margin-top: 1rem;
 }
 
 #payment-cart-items > * + * {
